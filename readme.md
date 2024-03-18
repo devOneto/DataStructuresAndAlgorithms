@@ -30,7 +30,7 @@ Implement:
     - [ ] Enqueue
     - [ ] Dequeue
     - [ ] Front
-- [ ] Trees
+- [ ] Trees (Binary)
     - [ ] Add Node
     - [ ] Remove Node
     - [ ] Search for a Node
