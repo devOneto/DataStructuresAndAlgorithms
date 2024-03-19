@@ -6,18 +6,19 @@ This repository store my own implementations of some of the most important data 
 
 Implement:
 
-- [ ] Lists (Simple, Double Linked and Circular)
-    - [ ]  Insertion
-        - [ ] Insertion on the beggining
-        - [ ] Insertion at the end
-        - [ ] Insertion at specific position
-    - [ ] Deletion
-        - [ ] Deletion at the beggining
-        - [ ] Deletion at the end
-        - [ ] Deletion at specific position
-    - [ ] Search
-        - [ ] Search element by value
-        - [ ] Search element by position
+- [X] Lists (Simple, Double Linked and Circular)
+    - [X] Traverse
+    - [X] Insertion
+        - [X] Insertion on the beggining
+        - [X] Insertion at the end
+        - [X] Insertion at specific position
+    - [X] Deletion
+        - [X] Deletion at the beggining
+        - [X] Deletion at the end
+        - [X] Deletion at specific position
+    - [X] Search
+        - [X] Search element by value
+        - [X] Search element by position
 - [ ] Stacks
     - [ ] Push
     - [ ] Pop
