@@ -41,12 +41,15 @@ Implement:
         - [ ] Post-Order
     - [ ] Verify Tree Length
 - [ ] Binary Search Tree (BST)
-    - [ ] Node Insertion
-    - [ ] Node Removal
-    - [ ] Node Search
-    - [ ] Traversals (pre-order, in-order, post-order)
+    - [ ] Traverse
+        - [ ] Pre-Order
+        - [ ] In-Order
+        - [ ] Post-Order
+    - [X] Insertion
+    - [ ] Deletion
+    - [ ] Search
     - [ ] Tree Height
-    - [ ] Properties Verification (e.g., if it's a valid BST)''
+    - [ ] Balance
 - [ ] Red-Black Tree (RBT)
     - [ ] Node Insertion
     - [ ] Node Removal
