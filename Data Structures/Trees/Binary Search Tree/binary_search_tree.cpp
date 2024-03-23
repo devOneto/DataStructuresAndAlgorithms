@@ -41,16 +41,122 @@ class BinarySearchTree {
 
         }
 
+        void print_preorder(Node* node) {
+            printf("%d ", node->key);
+            if( node->left ) this->print_preorder(node->left);
+            if ( node->right ) this->print_preorder(node->right);
+        }
+
+        void print_inorder(Node* node) {
+            if ( node->left ) this->print_inorder(node->left);
+            printf("%d ", node->key);
+            if ( node->right ) this->print_inorder(node->right);
+        }
+
+        void print_posorder(Node* node) {
+            if ( node->left ) this->print_posorder(node->left);
+            if ( node->right ) this->print_posorder(node->right);
+            printf("%d ", node->key);
+        }
+
+        Node* find(int key, Node* node) {
+
+            if ( this->root == nullptr ) return nullptr;
+
+            if ( node->key == key ) return node;
+
+            if ( node->left && key <= node->left->key ) {
+                return this->find( key, node->left );
+            }
+
+            if ( node->right && key >= node->right->key ) {
+                return this->find(key, node->right );
+            }
+
+            return nullptr;
+
+        }
+
+        Node* remove( int key, Node* from_node ) {           
+
+            if ( this->root == nullptr ) return nullptr;
+
+            if ( key < from_node->key ) {
+                from_node->left = this->remove(key, from_node->left);
+                return from_node;
+            }
+
+            if ( key > from_node->key) {
+                from_node->right = this->remove(key, from_node->right);
+                return from_node;
+            }
+
+            Node* target = from_node;
+
+            // do not have children
+            if ( !target->right && !target->left ) {
+                delete target;
+                return nullptr;
+            }
+            // have only one child
+            if ( !target->left && target->right ) { 
+                Node* temp = target->right;
+                delete target;
+                return temp;
+            }
+            if ( !target->right && target->left ) {
+                Node* temp = target->left;
+                delete target;
+                return temp;
+            }
+            // have both children
+            if ( target->right && target->left ) {
+
+                Node* temp = this->findMin(target->right); // could be findMax(target->left) too
+                target->key = temp->key;
+                target->right = this->remove(temp->key, target->right);
+            }
+
+
+            return from_node;
+
+        }
+
+    private:
+        
+        Node* findMin(Node* from_node) {
+            while( from_node->left != nullptr ) {
+                from_node = from_node->left;
+            }
+            return from_node;
+        }
+
 };
 
 int main() {
 
     BinarySearchTree* bst = new BinarySearchTree();
-    
-    bst->insert(2);
-    bst->insert(1, bst->root);
-    bst->insert(3, bst->root);
-    bst->insert(4, bst->root);
+
+    bst->insert(16);
+    bst->insert(12, bst->root);
+    bst->insert(20, bst->root);
+    bst->insert(8, bst->root);
+    bst->insert(6, bst->root);
+    bst->insert(10, bst->root);
+    bst->insert(14, bst->root);
+    bst->insert(18, bst->root);
+    bst->insert(24, bst->root);
+
+    bst->print_preorder(bst->root);
+    printf("\n");
+    bst->print_inorder(bst->root);
+    printf("\n");
+    bst->print_posorder(bst->root);
+    printf("\n");
+
+    printf("%d ", bst->find(24, bst->root));
+
+    bst->remove(12, bst->root);
 
     return 0;
 }

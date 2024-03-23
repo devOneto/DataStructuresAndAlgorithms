@@ -40,14 +40,13 @@ Implement:
         - [ ] In-Order
         - [ ] Post-Order
     - [ ] Verify Tree Length
-- [ ] Binary Search Tree (BST)
-    - [ ] Traverse
-        - [ ] Pre-Order
-        - [ ] In-Order
-        - [ ] Post-Order
+- [X] Binary Search Tree (BST)
+        - [X] Pre-Order
+        - [X] In-Order
+        - [X] Post-Order
     - [X] Insertion
-    - [ ] Deletion
-    - [ ] Search
+    - [X] Deletion
+    - [X] Search
     - [ ] Tree Height
     - [ ] Balance
 - [ ] Red-Black Tree (RBT)
