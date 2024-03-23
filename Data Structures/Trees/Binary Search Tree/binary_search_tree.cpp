@@ -131,6 +131,12 @@ class BinarySearchTree {
             return from_node;
         }
 
+        Node* findMax(Node* from_node) {
+            while( from_node->right != nullptr ) {
+                from_node = from_node->right;
+            }
+        }
+
 };
 
 int main() {
