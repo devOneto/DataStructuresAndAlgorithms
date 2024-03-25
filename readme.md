@@ -41,6 +41,7 @@ Implement:
         - [ ] Post-Order
     - [ ] Verify Tree Length
 - [X] Binary Search Tree (BST)
+    - [X] Traverse
         - [X] Pre-Order
         - [X] In-Order
         - [X] Post-Order
@@ -49,6 +50,14 @@ Implement:
     - [X] Search
     - [ ] Tree Height
     - [ ] Balance
+- [ ] AVL Tree (BST)
+    - [X] Balance
+        - [X] Left Rotation
+        - [X] Right Rotation
+        - [X] Left Right Rotation
+        - [X] Right Left Rotation
+    - [X] Insertion
+    - [ ] Deletion
 - [ ] Red-Black Tree (RBT)
     - [ ] Node Insertion
     - [ ] Node Removal

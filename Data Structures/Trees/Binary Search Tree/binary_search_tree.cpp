@@ -122,6 +122,17 @@ class BinarySearchTree {
 
         }
 
+        int getMaxDepth ( Node* from_node ) {
+            
+            if ( from_node == nullptr ) return 0;
+
+            int leftDepth = this->getMaxDepth(from_node->left);
+            int rightDepth = this->getMaxDepth(from_node->right);
+
+            return (leftDepth > rightDepth) ? leftDepth + 1 : rightDepth + 1;
+
+        }
+
     private:
         
         Node* findMin(Node* from_node) {
@@ -160,9 +171,11 @@ int main() {
     bst->print_posorder(bst->root);
     printf("\n");
 
-    printf("%d ", bst->find(24, bst->root));
+    printf("%d ", bst->find(24, bst->root), "\n");
 
     bst->remove(12, bst->root);
+
+    printf("BST Height: %d", bst->getMaxDepth(bst->root));
 
     return 0;
 }
