@@ -59,12 +59,10 @@ Implement:
     - [X] Insertion
     - [ ] Deletion
 - [ ] Red-Black Tree (RBT)
-    - [ ] Node Insertion
-    - [ ] Node Removal
-    - [ ] Node Search
-    - [ ] Traversals (pre-order, in-order, post-order)
-    - [ ] Tree Height
+    - [X] Insertion
+    - [ ] Deletion
     - [ ] Properties Verification (e.g., if color properties are maintained)
+    - [ ] Find Strict Sucessor
 - [ ] Graph
     - [ ] Vertex Insertion
     - [ ] Vertex Removal
